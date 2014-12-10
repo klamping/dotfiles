@@ -1,0 +1,60 @@
+# Compiled Python files
+*.pyc
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashess
+
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+*.swo
+.DS_Store
+.grunt
+
+pids
+logs
+results
+
+/npm-debug.log
+
+# 3rd-party dependencies
+/node_modules/
+
+# SublimeText project files
+*.sublime-workspace
+*.sublime-project
+
+.AppleDouble
+.LSOverride
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+*.iml
+*.ipr
+*.iws
+.idea/
+
+.extras

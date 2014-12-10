@@ -1,0 +1,64 @@
+config defaultToCurrentScreen true
+# Shows app icons and background apps, spreads icons in the same place.
+config windowHintsShowIcons false
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+
+# Monitor Aliases
+alias mon-laptop   0
+alias mon-dell1    1
+alias mon-dell2    2
+
+# Abstract positions
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
+alias 1-full move screenOriginX;screenOriginY screenSizeX;screenSizeY ${mon-laptop}
+alias 1-half move screenOriginX;screenOriginY screenSizeX/1.5;screenSizeY/1.5 ${mon-laptop}
+alias 2-full move screenOriginX;screenOriginY screenSizeX;screenSizeY ${mon-dell1}
+alias 2-half move screenOriginX;150 screenSizeX;screenSizeY/2 ${mon-dell1}
+alias 3-full move screenOriginX;screenOriginY screenSizeX;screenSizeY ${mon-dell2}
+
+# Common Layouts
+layout 1monitor 'Sublime Text':REPEAT ${full}
+layout 1monitor 'Google Chrome':REPEAT ${full}
+layout 1monitor 'Firefox':REPEAT ${1-full}
+layout 1monitor 'HipChat':REPEAT ${1-half}
+layout 1monitor 'Airmail':REPEAT ${1-full}
+
+layout 2monitors 'Firefox':REPEAT ${1-full}
+layout 2monitors 'Google Chrome':REPEAT ${1-full}
+layout 2monitors 'Sublime Text':REPEAT ${2-full}
+layout 2monitors 'Airmail':REPEAT ${1-full}
+
+layout 3monitors 'Thunderbird':REPEAT ${1-full}
+layout 3monitors 'Microsoft Outlook':REPEAT ${1-full}
+layout 3monitors 'Airmail':REPEAT ${1-full}
+layout 3monitors 'SomaFM':REPEAT ${1-full}
+layout 3monitors 'HipChat':REPEAT ${1-half}
+layout 3monitors 'LimeChat':REPEAT ${1-half}
+layout 3monitors 'Google Chrome':REPEAT ${3-full}
+layout 3monitors 'Firefox':REPEAT ${1-full}
+layout 3monitors 'Sublime Text':REPEAT ${2-full}
+
+# Default Layouts
+default 3monitors resolutions:${mon-laptop};${mon-dell1};${mon-dell2};
+default 2monitors resolutions:${mon-laptop};${mon-dell1};
+default 1monitor  resolutions:${mon-laptop}
+
+# Bindings
+bind e:alt hint ASDFGHJKLQWERTYUIOPCVBN # use whatever keys you want
+bind f:alt ${full}
+bind g:alt grid padding:5 0:6,2 1:6,2
+bind b:cmd;alt focus 'Google Chrome'
+bind e:cmd;alt focus 'Sublime Text'
+bind 1:alt layout 1monitor
+bind 2:alt layout 2monitors
+bind 3:alt layout 3monitors
+bind down:cmd;alt ${2-half}
+#bind left:cmd;alt ${1-full}
+#bind left:cmd;alt ${3-full}

@@ -160,3 +160,12 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[credential]
+    helper = osxkeychain
+[core]
+    excludesfile = /Users/kevi6661/.global_ignore
+[help]
+    autocorrect = 1
+[url "https://"]
+    insteadOf = git://

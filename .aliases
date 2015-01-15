@@ -7,7 +7,6 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias s="cd ~/sites"
@@ -147,17 +146,6 @@ alias psaux="ps aux | grep "
 
 # application aliases
 alias vi="vim"
-
-#Encore Stuff
-alias ens="grunt server:stubbed:watch"
-alias encomp="grunt-init ../../grunt-tasks/component-template"
-alias eui="cd ~/Sites/encore-ui"
-alias euin="cd ~/Sites/encore-ui-nav"
-alias bui="cd ~/Sites/billing-ui"
-alias vui="cd ~/Sites/vcenter-ui"
-alias etui="cd ~/Sites/encore-ui-template"
-alias elui="cd ~/Sites/encore-ui-landing"
-alias ssui="cd ~/Sites/supportservice-ui"
 
 #
 # Make it easy to edit .bash_profile

@@ -1,0 +1,27 @@
+{
+  "in_process_packages":
+  [
+  ],
+  "installed_dependencies":
+  [
+    "0_package_control_loader",
+    "bz2"
+  ],
+  "installed_packages":
+  [
+    "Alignment",
+    "BracketHighlighter",
+    "Dotfiles Syntax Highlighting",
+    "Emmet",
+    "HTML5",
+    "Indent XML",
+    "JsFormat",
+    "JSONLint",
+    "MarkdownEditing",
+    "Monokai Extended",
+    "Package Control",
+    "SideBarEnhancements",
+    "SublimeLinter",
+    "Syntax Highlighting for Sass"
+  ]
+}

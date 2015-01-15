@@ -48,33 +48,12 @@ complete -W "NSGlobalDomain" defaults;
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
 
-
-
-
-# MacPorts Installer addition on 2012-02-26_at_19:19:40: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-[[ -s /Users/kevi6661/.nvm/nvm.sh ]] && . /Users/kevi6661/.nvm/nvm.sh # This loads NVM
-
-
 # Git branch in prompt.
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-export SAUCE_USERNAME=rackertools
-export SAUCE_ACCESS_KEY=15e2806d-0447-4edb-9e12-c5fa8b42aecf
-
-. ~/z.sh
-
 ulimit -n 2048
 
-export PATH=${PATH}:~/Development/sdk/platform-tools:~/Development/sdk/tools
+# export PATH=${PATH}:~/Development/sdk/platform-tools:~/Development/sdk/tools

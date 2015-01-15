@@ -57,3 +57,5 @@ export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 ulimit -n 2048
 
 # export PATH=${PATH}:~/Development/sdk/platform-tools:~/Development/sdk/tools
+
+source ~/.profile

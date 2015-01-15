@@ -164,8 +164,6 @@
 [credential]
     helper = osxkeychain
 [core]
-    excludesfile = /Users/kevi6661/.global_ignore
+    excludesfile = ~/.gitignore
 [help]
     autocorrect = 1
-[url "https://"]
-    insteadOf = git://

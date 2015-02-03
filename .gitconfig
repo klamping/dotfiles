@@ -167,3 +167,6 @@
     excludesfile = ~/.gitignore
 [help]
     autocorrect = 1
+[user]
+	name = Kevin Lamping
+	email = klamping@gmail.com

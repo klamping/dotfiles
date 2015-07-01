@@ -58,4 +58,10 @@ ulimit -n 2048
 
 # export PATH=${PATH}:~/Development/sdk/platform-tools:~/Development/sdk/tools
 
+eval "$(rbenv init -)"
+
+. ~/.nvm/nvm.sh
+
 source ~/.profile
+
+source ~/.secrets

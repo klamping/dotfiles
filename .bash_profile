@@ -1,6 +1,11 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+# Add npm local modules to path
+alias npm-exec="PATH=$(npm bin):$PATH"
+
+alias rmn="rm -rf node_modules"
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -48,12 +53,6 @@ complete -W "NSGlobalDomain" defaults;
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
 
-# Git branch in prompt.
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-
 ulimit -n 2048
 
 # export PATH=${PATH}:~/Development/sdk/platform-tools:~/Development/sdk/tools
@@ -65,3 +64,5 @@ eval "$(rbenv init -)"
 source ~/.profile
 
 source ~/.secrets
+
+source ~/command-separator.sh

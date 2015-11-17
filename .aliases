@@ -175,6 +175,7 @@ alias gl='git pull'
 alias gp='git push'
 alias glom='gl origin master'
 alias gtfl='git stash && git checkout master && git pull && git checkout - && git rebase master && git stash pop'
+alias guck="git reset --soft HEAD~1"
 
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 function sublFiles () {
@@ -186,9 +187,11 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 ## Screenshot app emulators
 alias screenshot="adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > ~/Downloads/android_screenshot.png"
 
-
 ## Simple Server
 alias server="python -m SimpleHTTPServer"
 
-# idonethis
-alias did="ruby ~/www/didit-cli-client/didit.rb"
+# Folder paths
+alias iftu="cd ~/sites/invision-functional-test-utils"
+alias aft="cd ~/sites/automated-functional-tests"
+alias nos="cd ~/sites/node-share"
+alias inlint="cd ~/sites/eslint-config-invision"

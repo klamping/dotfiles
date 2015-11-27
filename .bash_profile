@@ -66,3 +66,4 @@ source ~/.profile
 source ~/.secrets
 
 source ~/command-separator.sh
+

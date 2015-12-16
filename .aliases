@@ -94,36 +94,36 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 # URL-encode strings
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+# alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
 # Merge PDF files
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
-alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
+# alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 
 # Disable Spotlight
-alias spotoff="sudo mdutil -a -i off"
+# alias spotoff="sudo mdutil -a -i off"
 # Enable Spotlight
-alias spoton="sudo mdutil -a -i on"
+# alias spoton="sudo mdutil -a -i on"
 
 # PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
-alias plistbuddy="/usr/libexec/PlistBuddy"
+# alias plistbuddy="/usr/libexec/PlistBuddy"
 
 # Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
 # (useful when executing time-consuming commands)
-alias badge="tput bel"
+# alias badge="tput bel"
 
 # Intuitive map function
 # For example, to list all directories that contain a certain file:
 # find . -name .gitattributes | map dirname
-alias map="xargs -n1"
+# alias map="xargs -n1"
 
 # One of @janmoesen’s ProTip™s
-for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-    alias "$method"="lwp-request -m '$method'"
-done
+# for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+#     alias "$method"="lwp-request -m '$method'"
+# done
 
 # Make Grunt print stack traces by default
-command -v grunt > /dev/null && alias grunt="grunt --stack"
+# command -v grunt > /dev/null && alias grunt="grunt --stack"
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
@@ -137,7 +137,7 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Reload the shell (i.e. invoke as a login shell)
-alias reload="exec $SHELL -l"
+# alias reload="exec $SHELL -l"
 
 
 
@@ -151,7 +151,7 @@ alias vi="vim"
 # Make it easy to edit .bash_profile
 #
 
-alias vp="subl ~/dotfiles/.bash_profile"
+alias vp="st ~/dotfiles/.zshrc"
 
 # This alias will allow you to reload .bash_profile from any directory.
 # The bash command to reload a resource file is "source"
@@ -177,15 +177,15 @@ alias glom='gl origin master'
 alias gtfl='git stash && git checkout master && git pull && git checkout - && git rebase master && git stash pop'
 alias guck="git reset --soft HEAD~1"
 
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-function sublFiles () {
-    find $@ | xargs /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
-}
+# alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+# function sublFiles () {
+#     find $@ | xargs /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
+# }
 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 ## Screenshot app emulators
-alias screenshot="adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > ~/Downloads/android_screenshot.png"
+# alias screenshot="adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > ~/Downloads/android_screenshot.png"
 
 ## Simple Server
 alias server="python -m SimpleHTTPServer"
@@ -195,3 +195,8 @@ alias iftu="cd ~/sites/invision-functional-test-utils"
 alias aft="cd ~/sites/automated-functional-tests"
 alias nos="cd ~/sites/node-share"
 alias inlint="cd ~/sites/eslint-config-invision"
+
+# Add npm local modules to path
+alias npm-exec="PATH=$(npm bin):$PATH"
+
+alias rmn="rm -rf node_modules"

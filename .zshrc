@@ -51,11 +51,11 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git adb colored-man-pages github git nvm osx sublime)
+plugins=(git adb github nvm osx sublime)
 
 # User configuration
 
-export PATH="/Users/klamping/.rbenv/shims:/Users/klamping/.nvm/v0.10.33/bin:/Users/klamping/.rbenv/shims:/Users/klamping/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin"
+export PATH="/Users/klamping/.nvm/v0.10.33/bin:/Users/klamping/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -84,4 +84,28 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+## Pull from .bash_profile
+# Load the shell dotfiles, and then some:
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.extra can be used for other settings you don’t want to commit.
+for file in ~/.{path,exports,aliases}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
+ulimit -n 2048
+
+# export PATH=${PATH}:~/Development/sdk/platform-tools:~/Development/sdk/tools
+
+
+# source ~/.profile
+
+source ~/.secrets
+
+# source ~/command-separator.sh
+
 source /Users/klamping/Sites/InVision_Docker/scripts/invision.sh
+
+eval "$(rbenv init -)"
+eval "$(docker-machine env default)"

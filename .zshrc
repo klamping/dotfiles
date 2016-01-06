@@ -105,7 +105,8 @@ source ~/.secrets
 
 # source ~/command-separator.sh
 
+eval "$(docker-machine env default)"
+eval "$(rbenv init -)"
+
 source /Users/klamping/Sites/InVision_Docker/scripts/invision.sh
 
-eval "$(rbenv init -)"
-eval "$(docker-machine env default)"

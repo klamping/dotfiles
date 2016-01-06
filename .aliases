@@ -196,6 +196,13 @@ alias aft="cd ~/sites/automated-functional-tests"
 alias nos="cd ~/sites/node-share"
 alias inlint="cd ~/sites/eslint-config-invision"
 
+# npm link
+alias lniftu="npm link invision-functional-test-utils"
+alias ulniftu="npm unlink invision-functional-test-utils"
+
+# npm nuke
+alias npmnuke="rm -rf node_modules && npm install"
+
 # Add npm local modules to path
 alias npm-exec="PATH=$(npm bin):$PATH"
 

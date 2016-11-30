@@ -13,8 +13,8 @@ function doIt() {
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt;
 else
-	read "continue?This may overwrite existing files in your home directory. Are you sure? (y/n) ";
-	if [[ "$continue" =~ ^[Yy]$ ]]; then
+	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " cont;
+	if [[ "$cont" =~ ^[Yy]$ ]]; then
 		doIt;
 	fi;
 fi;

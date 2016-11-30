@@ -26,7 +26,7 @@ ZSH_THEME="agnoster"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+#DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -96,17 +96,8 @@ unset file;
 
 ulimit -n 2048
 
-# export PATH=${PATH}:~/Development/sdk/platform-tools:~/Development/sdk/tools
-
+export PATH=${PATH}:~/Development/sdk/platform-tools:~/Development/sdk/tools
 
 # source ~/.profile
 
 source ~/.secrets
-
-# source ~/command-separator.sh
-
-eval "$(docker-machine env default)"
-eval "$(rbenv init -)"
-
-source /Users/klamping/Sites/InVision_Docker/scripts/invision.sh
-

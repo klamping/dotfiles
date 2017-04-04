@@ -1,27 +1,49 @@
 {
+  "bootstrapped": true,
   "in_process_packages":
   [
-  ],
-  "installed_dependencies":
-  [
-    "0_package_control_loader",
-    "bz2"
   ],
   "installed_packages":
   [
     "Alignment",
+    "Babel",
     "BracketHighlighter",
+    "ColorSchemeSelector",
+    "DocBlockr",
     "Dotfiles Syntax Highlighting",
+    "EditorConfig",
     "Emmet",
+    "Gutter Color",
+    "HTML-CSS-JS Prettify",
     "HTML5",
     "Indent XML",
+    "JavaScriptNext - ES6 Syntax",
+    "jQuery",
     "JsFormat",
     "JSONLint",
+    "LESS",
+    "Markdown Preview",
     "MarkdownEditing",
+    "MarkdownHighlighting",
+    "Material Theme",
+    "Mocha Snippets",
     "Monokai Extended",
+    "Numix Theme",
     "Package Control",
+    "PackageResourceViewer",
     "SideBarEnhancements",
     "SublimeLinter",
-    "Syntax Highlighting for Sass"
+    "SublimeLinter-contrib-eslint",
+    "SublimeLinter-jscs",
+    "SublimeLinter-jshint",
+    "SublimeREPL",
+    "Syntax Highlighting for Sass",
+    "Text Pastry",
+    "Theme - Numix",
+    "Theme - Primer",
+    "Theme - Spacegray",
+    "Web Inspector",
+    "WebdriverIO",
+    "Zen Tabs"
   ]
 }
